@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js" > <!--<![endif]-->
+
+
+
+<head>
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <title>blonder</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+  <link rel="stylesheet" href="/stylesheet/css/reset.css">
+  <link rel="stylesheet" href="app.css">
+
+<meta name=“author” title=“Elia Fornari | Qual Agency”>
+
+
+
+<!--
+=======================================================================
+
+    Chapter | 2016
+
+    Designed and developed by Elia Fornari | Qual Agency
+
+=======================================================================
+
+-->
+
+
+
+  <base href="/">
+
+  <!-- .........................<span app-version></span> ....................-->
+
+
+  <script>
+    //google analytics
+
+  </script>
+
+
+
+</head>
+
+
+
+<!-- .................................. Body ...............................-->
+
+<body ng-controller="routeController" page-loading-spinner>
+
+
+<nav-directive></nav-directive>
+
+<!-- <header ng-controller="navCtrl" class="header" ng-click="openNav()">
+  <div class="header-wrapper">
+    <pop-directive></pop-directive>
+  </div>
+</header> -->
+
+
+
+<!--
+<div class="logo">
+  <a class="logo-a" href="/">
+    <logo-directive></logo-directive>
+  </a>
+</div>
+
+ -->
+
+
+
+
+
+  <div ng-show="pageLoading" class="page-loader-div">
+
+    <p>
+      loading...
+    </p>
+
+  </div>
+
+
+
+<!--
+  <div class="share">
+    <div class="share-button" ng-click="openShare()">
+      SHARE
+    </div>
+    <div class="share-content" ng-show="isShare">
+      <ul class="share-ul">
+        <li class="share-li"><a href="" target="_blank">instagram</a></li>
+        <li class="share-li"><a href="" target="_blank">facebook</a></li>
+        <li class="share-li"><a href="" target="_blank">tumblr</a></li>
+      </ul>
+    </div>
+  </div>
+ -->
+
+
+
+
+  <!-- .................................. Main ...............................-->
+
+  <main ng-view class='main' autoscroll="true">
+  </main>
+
+
+
+
+
+</body>
+
+
+<script type="text/javascript" src="/node_modules/prismic.io/dist/prismic.io.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-loader.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-touch.js"></script>
+
+
+  <script type="text/javascript" src="/concat.js"></script>
+
+</html>

@@ -1,0 +1,190 @@
+/*.................................................................................*/
+//---------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------------------
+$break-phone: 767px;
+$break-phone-landscape: 767px;
+$break-tablet: 1022px;
+$break-tablet-landscape: 1024px;
+$break-laptop-small: 1280px;
+$break-laptop-medium: 1440px;
+$break-laptop-large: 1920px;
+$break-desktop: 50000px;
+/*$break-large-desktop: 2500px;*/
+/*$break-infinite: 500000px;*/
+
+@mixin respond-to($media) {
+/*  @if $media == large-desktop {
+    @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+  }*/
+  @if $media == desktop {
+    @media only screen and (min-width: $break-laptop-large + 1) and (max-width: $break-desktop) { @content; }
+  }
+  @else if $media == laptop-large {
+    @media only screen and (min-width: $break-laptop-medium + 1) and (max-width: $break-laptop-large) { @content; }
+  }
+  @else if $media == laptop-medium {
+    @media only screen and (min-width: $break-laptop-small + 1) and (max-width: $break-laptop-medium) { @content; }
+  }
+  @else if $media == laptop-small {
+    @media only screen and (min-width: $break-tablet + 1) and (max-width: $break-laptop-small) { @content; }
+  }
+
+  ////////////|||||||||||..just changed the tablet media query below because it was not reading the landscape view: 1024px is the tablet landscape width..||||||||||||||\\\\\\\\\\
+
+  @else if $media == tablet-landscape {
+    @media only screen and (min-width: $break-phone + 1) and (max-width: $break-tablet-landscape) and (orientation: landscape) { @content; }
+  }
+  @else if $media == tablet-portrait {
+    @media only screen and (min-width: $break-phone + 1) and (max-width: $break-tablet) and (orientation: portrait) { @content; }
+  }
+  @else if $media == phone {
+    @media only screen and (min-width: 0px) and (max-width: $break-phone) { @content; }
+  }
+
+  //These are only for the real device
+  @else if $media == tablet-landscape-device {
+    @media only screen and (min-device-width: $break-phone + 1) and (max-device-width: $break-tablet) and (orientation: landscape) { @content; }
+  }
+  @else if $media == tablet-portrait-device {
+    @media only screen and (min-device-width: $break-phone + 1) and (max-device-width: $break-tablet) and (orientation: portrait) { @content; }
+  }
+  @else if $media == phone-device {
+    @media only screen and (min-width: 0px) and (max-device-width: $break-phone) { @content; }
+  }
+  @else if $media == phone-landscape-device {
+        @media only screen and (min-width: 0px) and (max-width: $break-phone) and (orientation: landscape) { @content; }
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*....................................SCSS MIXINS..................................*/
+
+
+@mixin hover-effect-opacity($opacity: 1, $hover: .6){
+  opacity: $opacity;
+  transition:         opacity $transition-medium ease;
+  -webkit-transition: opacity $transition-medium ease;
+  -moz-transition:    opacity $transition-medium ease;
+  -ms-transition:     opacity $transition-medium ease;
+  -o-transition:      opacity $transition-medium ease;
+
+  &:hover {
+    opacity: $hover;
+    @include respond-to(phone-device) {
+        opacity: $opacity !important;
+    }
+    @include respond-to(tablet-portrait-device) {
+        opacity: $opacity !important;
+    }
+    @include respond-to(tablet-landscape-device) {
+        opacity: $opacity !important;
+    }
+  }
+}
+
+
+@mixin hover-effect-color($color, $hover){
+  color: $color;
+  fill:  $color;
+  transition:         color $transition-medium ease;
+  -webkit-transition: color $transition-medium ease;
+  -moz-transition:    color $transition-medium ease;
+  -ms-transition:     color $transition-medium ease;
+  -o-transition:      color $transition-medium ease;
+
+  &:hover {
+    color: $hover;
+    @include respond-to(phone-device) {
+      color: $color !important;
+    }
+    @include respond-to(tablet-portrait-device) {
+      color: $color !important;
+    }
+    @include respond-to(tablet-landscape-device) {
+      color: $color !important;
+    }
+  }
+}
+
+
+@mixin transform-transition($duration: $transition-slow){
+  transition:         transform $duration ease-in-out;
+  -webkit-transition: -webkit-transform $duration ease-in-out;
+  -moz-transition:    -moz-transform $duration ease-in-out;
+  -ms-transition:     -ms-transform $duration ease-in-out;
+  -o-transition:      -o-transform $duration ease-in-out;
+}
+
+@mixin transform-element($coordinate){
+  transform: $coordinate;
+  -ms-transform: $coordinate; /* IE 9 */
+ 	-webkit-transform: $coordinate; /* Safari */
+  transform-origin: 0 0;
+}
+
+
+@mixin transform-position($position: -100%){
+  transform: translateX($position);
+  -webkit-transform:  translateX($position);
+  -moz-transform:     translateX($position);
+  -ms-transform:      translateX($position);
+  -o-transform:       translateX($position);
+}
+
+
+@mixin center-transform($left, $top){
+  transform: translate3d($left,$top, 0);
+  -webkit-transform:  translate3d($left,$top, 0);
+  -moz-transform:     translate3d($left,$top, 0);
+  -ms-transform:      translate3d($left,$top, 0);
+  -o-transform:       translate3d($left,$top, 0);
+}
+
+
+@mixin header($color, $hasHover){
+
+  font-size: $font-size-title;
+  line-height: $line-height-title;
+  font-family: helvetica;
+
+  @if $hasHover == 'yes'{
+            @if $color == 'red' {
+                color: $black;
+                @include hover-effect-color(#000000, #A78A71);
+               // if width is not passed, or empty do this
+            } @else if $color == 'white' {
+                 color: #FFFFFF;
+                 @include hover-effect-color(#FFFFFF, #A78A71);
+            }  @else if $color == 'black' {
+                 color: #000000;
+                 @include hover-effect-color(#000000, #A78A71);
+            }
+  } @else{
+            @if $color == 'red' {
+                color: $red;
+               // if width is not passed, or empty do this
+           } @else if $color == 'white' {
+                 color: #FFFFFF;
+           }  @else if $color == 'black' {
+                color: #000000;
+           }
+  }
+
+
+
+}
