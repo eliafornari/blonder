@@ -159,12 +159,25 @@
     height:80px;
     width:220px;
     .social-icon{
+      display: block;
       float: left;
       width: 30px;
       height: 30px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 5px;
+      &:hover{
+        a{
+          svg{
+            path{
+              @include hover-effect-fill(#FFFFFF, #d94f30);
+
+            }
+            @include hover-effect-fill(#FFFFFF, #d94f30);
+          }
+        }
+
+      }
       &:nth-child(1){
         margin-left: 0;
       }

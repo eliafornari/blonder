@@ -508,12 +508,75 @@ main {
     height: 80px;
     width: 220px; }
     .social .social-wrapper .social-icon {
+      display: block;
       float: left;
       width: 30px;
       height: 30px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 5px; }
+      .social .social-wrapper .social-icon:hover a svg {
+        fill: #FFFFFF;
+        transition: fill 0.4s ease;
+        -webkit-transition: fill 0.4s ease;
+        -moz-transition: fill 0.4s ease;
+        -ms-transition: fill 0.4s ease;
+        -o-transition: fill 0.4s ease; }
+        .social .social-wrapper .social-icon:hover a svg path {
+          fill: #FFFFFF;
+          transition: fill 0.4s ease;
+          -webkit-transition: fill 0.4s ease;
+          -moz-transition: fill 0.4s ease;
+          -ms-transition: fill 0.4s ease;
+          -o-transition: fill 0.4s ease; }
+          .social .social-wrapper .social-icon:hover a svg path:hover {
+            fill: #d94f30;
+            stroke: #d94f30;
+            /*  @if $media == large-desktop {
+                @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+              }*/
+            /*  @if $media == large-desktop {
+                @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+              }*/
+            /*  @if $media == large-desktop {
+                @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+              }*/ }
+            @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+              .social .social-wrapper .social-icon:hover a svg path:hover {
+                fill: #d94f30;
+                stroke: #d94f30; } }
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+              .social .social-wrapper .social-icon:hover a svg path:hover {
+                fill: #FFFFFF !important;
+                stroke: #FFFFFF !important; } }
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+              .social .social-wrapper .social-icon:hover a svg path:hover {
+                fill: #FFFFFF !important;
+                stroke: #FFFFFF !important; } }
+        .social .social-wrapper .social-icon:hover a svg:hover {
+          fill: #d94f30;
+          stroke: #d94f30;
+          /*  @if $media == large-desktop {
+              @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+            }*/
+          /*  @if $media == large-desktop {
+              @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+            }*/
+          /*  @if $media == large-desktop {
+              @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+            }*/ }
+          @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+            .social .social-wrapper .social-icon:hover a svg:hover {
+              fill: #d94f30;
+              stroke: #d94f30; } }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+            .social .social-wrapper .social-icon:hover a svg:hover {
+              fill: #FFFFFF !important;
+              stroke: #FFFFFF !important; } }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+            .social .social-wrapper .social-icon:hover a svg:hover {
+              fill: #FFFFFF !important;
+              stroke: #FFFFFF !important; } }
       .social .social-wrapper .social-icon:nth-child(1) {
         margin-left: 0; }
       .social .social-wrapper .social-icon:nth-child(4) {

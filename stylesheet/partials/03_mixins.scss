@@ -122,6 +122,37 @@ $break-desktop: 50000px;
 }
 
 
+
+
+@mixin hover-effect-fill($color, $hover){
+
+  fill:  $color;
+  transition:         fill $transition-medium ease;
+  -webkit-transition: fill $transition-medium ease;
+  -moz-transition:    fill $transition-medium ease;
+  -ms-transition:     fill $transition-medium ease;
+  -o-transition:      fill $transition-medium ease;
+
+  &:hover {
+    fill: $hover;
+    stroke: $hover;
+    @include respond-to(phone-device) {
+      fill: $hover;
+      stroke: $hover;
+    }
+    @include respond-to(tablet-portrait-device) {
+      fill: $color !important;
+      stroke: $color !important;
+    }
+    @include respond-to(tablet-landscape-device) {
+      fill: $color !important;
+      stroke: $color !important;
+    }
+  }
+}
+
+
+
 @mixin transform-transition($duration: $transition-slow){
   transition:         transform $duration ease-in-out;
   -webkit-transition: -webkit-transform $duration ease-in-out;
