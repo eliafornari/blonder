@@ -6,20 +6,20 @@
 /*.....................TEXT MARK STYLES......................*/
 
 ::-moz-selection {
-  background: #FFFFFF;
-  color: #000000;
-  fill: #000000;
-  stroke: #000000;
+  background: transparent;
+  color: #d94f30;
+  fill: #d94f30;
+  stroke: #d94f30;
   text-shadow: none;
   opacity:1;
 }
 
 
 ::selection {
-    background: #FFFFFF;
-    color: #000000;
-    fill: #000000;
-    stroke: #000000;
+    background: transparent;
+    color: #d94f30;
+    fill: #d94f30;
+    stroke: #d94f30;
     text-shadow: none;
     opacity:1;
 }
