@@ -506,7 +506,7 @@ main {
   .social .social-wrapper {
     margin: auto;
     height: 80px;
-    width: 220px; }
+    width: 130px; }
     .social .social-wrapper .social-icon {
       display: block;
       float: left;
@@ -579,7 +579,7 @@ main {
               stroke: #FFFFFF !important; } }
       .social .social-wrapper .social-icon:nth-child(1) {
         margin-left: 0; }
-      .social .social-wrapper .social-icon:nth-child(4) {
+      .social .social-wrapper .social-icon:nth-child(3) {
         margin-right: 0; }
       .social .social-wrapper .social-icon a svg {
         width: 100%;
