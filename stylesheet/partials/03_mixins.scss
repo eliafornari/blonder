@@ -136,6 +136,12 @@ $break-desktop: 50000px;
   &:hover {
     fill: $hover;
     stroke: $hover;
+    a{
+      svg{
+        fill: $hover;
+        stroke: $hover;
+      }
+    }
     @include respond-to(phone-device) {
       fill: $hover;
       stroke: $hover;

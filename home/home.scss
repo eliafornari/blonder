@@ -18,7 +18,7 @@
         height: 100%;
         .logo-h1{
           margin: auto;
-          width: 70vw;
+          height: 15vw;
 
           svg{
             width: 100%;
@@ -48,11 +48,9 @@
         .episode-iframe{
           display: block;
           margin: auto;
-          width: 70vw;
-          height:45vh;
-
+          width: 100vw;
+          height:60vh;
         }
-
       }
     }
   }

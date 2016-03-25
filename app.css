@@ -4,6 +4,144 @@
 /*$break-large-desktop: 2500px;*/
 /*$break-infinite: 500000px;*/
 /*....................................SCSS MIXINS..................................*/
+.pop {
+  width: auto;
+  height: auto;
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  fill: #FFFFFF;
+  transition: fill 0.4s ease;
+  -webkit-transition: fill 0.4s ease;
+  -moz-transition: fill 0.4s ease;
+  -ms-transition: fill 0.4s ease;
+  -o-transition: fill 0.4s ease; }
+  .pop:hover {
+    fill: #d94f30;
+    stroke: #d94f30;
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/ }
+    .pop:hover a svg {
+      fill: #d94f30;
+      stroke: #d94f30; }
+    @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+      .pop:hover {
+        fill: #d94f30;
+        stroke: #d94f30; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+      .pop:hover {
+        fill: #FFFFFF !important;
+        stroke: #FFFFFF !important; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+      .pop:hover {
+        fill: #FFFFFF !important;
+        stroke: #FFFFFF !important; } }
+  .pop .pop-a {
+    width: auto;
+    height: auto; }
+    .pop .pop-a svg {
+      width: 60px;
+      height: auto; }
+
+.nav {
+  width: 100px;
+  height: 500px;
+  position: fixed;
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  z-index: 999; }
+
+.nav-content {
+  width: 100px;
+  height: 500px; }
+  .nav-content .nav-ul .nav-li {
+    width: 100px;
+    text-align: right; }
+    .nav-content .nav-ul .nav-li a {
+      color: #FFFFFF;
+      fill: #FFFFFF;
+      transition: color 0.4s ease;
+      -webkit-transition: color 0.4s ease;
+      -moz-transition: color 0.4s ease;
+      -ms-transition: color 0.4s ease;
+      -o-transition: color 0.4s ease;
+      font-size: 80px;
+      font-weight: 900; }
+      .nav-content .nav-ul .nav-li a:hover {
+        color: #d94f30;
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/ }
+        @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+          .nav-content .nav-ul .nav-li a:hover {
+            color: #FFFFFF !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+          .nav-content .nav-ul .nav-li a:hover {
+            color: #FFFFFF !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+          .nav-content .nav-ul .nav-li a:hover {
+            color: #FFFFFF !important; } }
+
+.soundcloud-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999; }
+  .soundcloud-button a {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -ms-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    font-size: 80px;
+    font-weight: 900; }
+    .soundcloud-button a:hover {
+      color: #d94f30;
+      /*  @if $media == large-desktop {
+          @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+        }*/
+      /*  @if $media == large-desktop {
+          @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+        }*/
+      /*  @if $media == large-desktop {
+          @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+        }*/ }
+      @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+        .soundcloud-button a:hover {
+          color: #FFFFFF !important; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+        .soundcloud-button a:hover {
+          color: #FFFFFF !important; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+        .soundcloud-button a:hover {
+          color: #FFFFFF !important; } }
+
+.soundcloud {
+  position: fixed;
+  top: 100px;
+  left: 10px; }
+  .soundcloud iframe {
+    width: 200px;
+    height: 200px; }
+
 /*....................................General settings..................................*/
 /*.....................TEXT MARK STYLES......................*/
 ::-moz-selection {
@@ -90,12 +228,19 @@ input, textarea, select, a, li {
   text-decoration: none; }
 
 /*.........................................................*/
+/*.............................NG-CLOAK............................*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer; }
+
 /*.........................................................*/
 /*.........................MAIN............................*/
 main {
   width: 100vw;
-  height: 100vh;
-  overflow: scroll;
   position: relative;
   display: block;
   list-style-type: none; }
@@ -429,7 +574,7 @@ main {
       height: 100%; }
       .logo table tr td .logo-h1 {
         margin: auto;
-        width: 70vw; }
+        height: 15vw; }
         .logo table tr td .logo-h1 svg {
           width: 100%;
           height: 100%; }
@@ -447,8 +592,8 @@ main {
       .episode table tr td .episode-iframe {
         display: block;
         margin: auto;
-        width: 70vw;
-        height: 45vh; }
+        width: 100vw;
+        height: 60vh; }
 
 .album {
   width: 100vw;
@@ -541,6 +686,9 @@ main {
             /*  @if $media == large-desktop {
                 @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
               }*/ }
+            .social .social-wrapper .social-icon:hover a svg path:hover a svg {
+              fill: #d94f30;
+              stroke: #d94f30; }
             @media only screen and (min-width: 0px) and (max-device-width: 767px) {
               .social .social-wrapper .social-icon:hover a svg path:hover {
                 fill: #d94f30;
@@ -565,6 +713,9 @@ main {
           /*  @if $media == large-desktop {
               @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
             }*/ }
+          .social .social-wrapper .social-icon:hover a svg:hover a svg {
+            fill: #d94f30;
+            stroke: #d94f30; }
           @media only screen and (min-width: 0px) and (max-device-width: 767px) {
             .social .social-wrapper .social-icon:hover a svg:hover {
               fill: #d94f30;

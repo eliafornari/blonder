@@ -123,6 +123,23 @@ input, textarea, select, a, li {
 
 
 
+/*.............................NG-CLOAK............................*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+cursor: pointer;
+}
+
+
+
+
+
 /*.........................................................*/
 
 
@@ -135,8 +152,8 @@ input, textarea, select, a, li {
 
 main {
   width:  100vw;
-  height: 100vh;
-  overflow:scroll;
+  // height: 100vh;
+  // overflow:scroll;
   position: relative;
   display: block;
   list-style-type: none;

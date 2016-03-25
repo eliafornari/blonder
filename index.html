@@ -62,14 +62,21 @@
 
 
 
-<!--
-<div class="logo">
-  <a class="logo-a" href="/">
-    <logo-directive></logo-directive>
+
+<div class="pop" ng-click="openNav()">
+  <a class="pop-a" href="/" >
+
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 width="716.85px" height="825.333px" viewBox="1814.5 0 716.85 825.333" enable-background="new 1814.5 0 716.85 825.333"
+    	 xml:space="preserve">
+    <text transform="matrix(0.9104 0 0 1 1743.6522 774.084)" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" font-family="'Helvetica-BoldOblique'" font-size="1000">O</text>
+    <text transform="matrix(0.9104 0 0 1 1743.6522 774.084)" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="60" stroke-miterlimit="10" font-family="'Helvetica-BoldOblique'" font-size="1000">O</text>
+    </svg>
+
   </a>
 </div>
 
- -->
+
 
 
 
@@ -83,6 +90,27 @@
 
   </div>
 
+
+
+<div class="soundcloud-button" ng-click="openSound()">
+  <a>S</a>
+
+</div>
+
+<div class="soundcloud">
+
+
+
+
+  <!-- <object class="sound-object" ng-hide="isSoundOpen" id="myPlayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+  <param name="movie" value="http://player.soundcloud.com/player.swf?url=https://soundcloud.com/blonderworld/sets/ep1-masters-final/s-BTHhn&amp;auto_play=true&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></param>
+  <param name="allowscriptaccess" value="always"></param>
+  <embed class="sound-embed" allowscriptaccess="always" height="81" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/blonderworld/sets/ep1-masters-final/s-BTHhn&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" width="100%" name="myPlayer"></embed>
+</object> -->
+
+<iframe ng-show="isSoundOpen" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/198074775&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+</div>
 
 
 <!--
