@@ -13,11 +13,12 @@
   right: 10px;
   z-index: 9999;
   fill: #FFFFFF;
-  transition: fill 0.4s ease;
-  -webkit-transition: fill 0.4s ease;
-  -moz-transition: fill 0.4s ease;
-  -ms-transition: fill 0.4s ease;
-  -o-transition: fill 0.4s ease; }
+  stroke: #FFFFFF;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease; }
   .pop:hover {
     fill: #d94f30;
     stroke: #d94f30;
@@ -33,6 +34,14 @@
     .pop:hover a svg {
       fill: #d94f30;
       stroke: #d94f30; }
+      .pop:hover a svg text {
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        fill: #d94f30;
+        stroke: #d94f30; }
     @media only screen and (min-width: 0px) and (max-device-width: 767px) {
       .pop:hover {
         fill: #d94f30;
@@ -662,18 +671,20 @@ main {
       margin-top: 5px; }
       .social .social-wrapper .social-icon:hover a svg {
         fill: #FFFFFF;
-        transition: fill 0.4s ease;
-        -webkit-transition: fill 0.4s ease;
-        -moz-transition: fill 0.4s ease;
-        -ms-transition: fill 0.4s ease;
-        -o-transition: fill 0.4s ease; }
+        stroke: #FFFFFF;
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease; }
         .social .social-wrapper .social-icon:hover a svg path {
           fill: #FFFFFF;
-          transition: fill 0.4s ease;
-          -webkit-transition: fill 0.4s ease;
-          -moz-transition: fill 0.4s ease;
-          -ms-transition: fill 0.4s ease;
-          -o-transition: fill 0.4s ease; }
+          stroke: #FFFFFF;
+          transition: all 0.4s ease;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease; }
           .social .social-wrapper .social-icon:hover a svg path:hover {
             fill: #d94f30;
             stroke: #d94f30;
@@ -689,6 +700,14 @@ main {
             .social .social-wrapper .social-icon:hover a svg path:hover a svg {
               fill: #d94f30;
               stroke: #d94f30; }
+              .social .social-wrapper .social-icon:hover a svg path:hover a svg text {
+                transition: all 0.4s ease;
+                -webkit-transition: all 0.4s ease;
+                -moz-transition: all 0.4s ease;
+                -ms-transition: all 0.4s ease;
+                -o-transition: all 0.4s ease;
+                fill: #d94f30;
+                stroke: #d94f30; }
             @media only screen and (min-width: 0px) and (max-device-width: 767px) {
               .social .social-wrapper .social-icon:hover a svg path:hover {
                 fill: #d94f30;
@@ -716,6 +735,14 @@ main {
           .social .social-wrapper .social-icon:hover a svg:hover a svg {
             fill: #d94f30;
             stroke: #d94f30; }
+            .social .social-wrapper .social-icon:hover a svg:hover a svg text {
+              transition: all 0.4s ease;
+              -webkit-transition: all 0.4s ease;
+              -moz-transition: all 0.4s ease;
+              -ms-transition: all 0.4s ease;
+              -o-transition: all 0.4s ease;
+              fill: #d94f30;
+              stroke: #d94f30; }
           @media only screen and (min-width: 0px) and (max-device-width: 767px) {
             .social .social-wrapper .social-icon:hover a svg:hover {
               fill: #d94f30;

@@ -127,11 +127,12 @@ $break-desktop: 50000px;
 @mixin hover-effect-fill($color, $hover){
 
   fill:  $color;
-  transition:         fill $transition-medium ease;
-  -webkit-transition: fill $transition-medium ease;
-  -moz-transition:    fill $transition-medium ease;
-  -ms-transition:     fill $transition-medium ease;
-  -o-transition:      fill $transition-medium ease;
+  stroke:  $color;
+  transition:         all $transition-medium ease;
+  -webkit-transition: all $transition-medium ease;
+  -moz-transition:    all $transition-medium ease;
+  -ms-transition:     all $transition-medium ease;
+  -o-transition:      all $transition-medium ease;
 
   &:hover {
     fill: $hover;
@@ -140,6 +141,15 @@ $break-desktop: 50000px;
       svg{
         fill: $hover;
         stroke: $hover;
+        text{
+          transition:         all $transition-medium ease;
+          -webkit-transition: all $transition-medium ease;
+          -moz-transition:    all $transition-medium ease;
+          -ms-transition:     all $transition-medium ease;
+          -o-transition:      all $transition-medium ease;
+          fill: $hover;
+          stroke: $hover;
+        }
       }
     }
     @include respond-to(phone-device) {
