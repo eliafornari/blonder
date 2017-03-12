@@ -1,0 +1,989 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*....................................SCSS VARIABLES..................................*/
+/*....................................................................................*/
+/*.................................................................................*/
+/*$break-large-desktop: 2500px;*/
+/*$break-infinite: 500000px;*/
+/*....................................SCSS MIXINS..................................*/
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  to {
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+@keyframes rotating {
+  from {
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  to {
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    transform: rotateY(360deg); } }
+/*....................................General settings..................................*/
+/*.....................TEXT MARK STYLES......................*/
+::-moz-selection {
+  background: transparent;
+  color: #78cace;
+  fill: #78cace;
+  stroke: #78cace;
+  text-shadow: none;
+  opacity: 1; }
+
+::selection {
+  background: transparent;
+  color: #78cace;
+  fill: #78cace;
+  stroke: #78cace;
+  text-shadow: none;
+  opacity: 1; }
+
+/*.........................................................*/
+/*.....................ACTIVE CLASSES......................*/
+.active {
+  color: #78cace !important;
+  pointer-events: none; }
+
+/*.........................................................*/
+/*....................HIDING SCROLLBAR.....................*/
+::-webkit-scrollbar {
+  display: none; }
+
+/*.....................GENERAL STYLES......................*/
+html {
+  font-family: helvetica;
+  width: 100%;
+  height: 100%;
+  margin: 0, 0;
+  padding: 0, 0; }
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0, 0;
+  padding: 0, 0;
+  text-transform: uppercase;
+  /* Set the background color of the HTML page to black */
+  background-color: #000000;
+  /* Hide oversized content. This prevents the scroll bars. */ }
+
+p, a, li {
+  font-size: 12px;
+  list-style-type: none;
+  letter-spacing: 1px;
+  color: #FFFFFF; }
+
+a {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease; }
+  a:hover {
+    color: #606060;
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/ }
+    @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+      a:hover {
+        color: #FFFFFF !important; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+      a:hover {
+        color: #FFFFFF !important; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+      a:hover {
+        color: #FFFFFF !important; } }
+
+input, textarea, select, a, li {
+  text-decoration: none; }
+
+/*.........................................................*/
+/*.............................NG-CLOAK............................*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer; }
+
+/*.........................................................*/
+/*.........................MAIN............................*/
+main {
+  width: 100vw;
+  position: relative;
+  display: block;
+  list-style-type: none; }
+
+/*.............................Loader............................*/
+.page-loader-div {
+  display: block;
+  height: 100vh;
+  opacity: 1;
+  display: block;
+  width: 100vw;
+  float: left;
+  padding: 0;
+  margin: 0;
+  display: list-item;
+  background-color: transparent;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed; }
+  .page-loader-div p {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    font-family: helvetica; }
+
+/*.............................NG-CLOAK............................*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer; }
+
+.share {
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 14; }
+
+.share-button {
+  color: #000000;
+  fill: #000000;
+  transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease; }
+  .share-button:hover {
+    color: #78cace;
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/ }
+    @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+      .share-button:hover {
+        color: #000000 !important; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+      .share-button:hover {
+        color: #000000 !important; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+      .share-button:hover {
+        color: #000000 !important; } }
+
+.share-content {
+  position: fixed;
+  bottom: 50px;
+  right: -87px; }
+  .share-content .share-ul .share-li a {
+    text-align: right;
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    line-height: 20px; }
+
+@keyframes close_slideLeft {
+  0% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-webkit-keyframes close_slideLeft {
+  0% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-moz-keyframes close_slideLeft {
+  0% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-ms-keyframes close_slideLeft {
+  0% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-o-keyframes close_slideLeft {
+  0% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@keyframes close_slideRight {
+  0% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-webkit-keyframes close_slideRight {
+  0% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-moz-keyframes close_slideRight {
+  0% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-ms-keyframes close_slideRight {
+  0% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; } }
+@-o-keyframes close_slideRight {
+  0% {
+    transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    /* IE 9 */
+    -webkit-transform: translateX(-100px);
+    /* Safari */
+    transform-origin: 0 0; }
+  100% {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    /* IE 9 */
+    -webkit-transform: translateX(0px);
+    /* Safari */
+    transform-origin: 0 0; } }
+.share-content {
+  position: fixed;
+  transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  /* IE 9 */
+  -webkit-transform: translateX(-100px);
+  /* Safari */
+  transform-origin: 0 0; }
+
+.share-content.ng-hide {
+  transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  /* IE 9 */
+  -webkit-transform: translateX(0px);
+  /* Safari */
+  transform-origin: 0 0; }
+
+.share-content.ng-hide-remove.ng-hide-remove-active {
+  -webkit-animation: close_slideLeft 0.3s ease-in;
+  -moz-animation: close_slideLeft 0.3s ease-in;
+  -ms-animation: close_slideLeft 0.3s ease-in;
+  -o-animation: close_slideLeft 0.3s ease-in;
+  animation: close_slideLeft 0.3s ease-in; }
+
+.share-content.ng-hide-add.ng-hide-add-active {
+  -webkit-animation: close_slideRight 0.3s ease-in;
+  -moz-animation: close_slideRight 0.3s ease-in;
+  -ms-animation: close_slideRight 0.3s ease-in;
+  -o-animation: close_slideRight 0.3s ease-in;
+  animation: close_slideRight 0.3s ease-in; }
+
+.images-loader-div {
+  display: block;
+  position: relative;
+  width: 33.333333333333vw !important;
+  height: 33.3333333333vw !important;
+  opacity: 1;
+  display: block;
+  padding: 0;
+  margin: 0 0 0 0;
+  display: list-item;
+  background-color: #FFFFFF;
+  /*  @if $media == large-desktop {
+      @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+    }*/ }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .images-loader-div {
+      width: 100vw !important;
+      height: 100vw !important; } }
+  .images-loader-div .loader {
+    position: relative;
+    height: 35px !important;
+    width: 35px !important;
+    top: 50% !important;
+    left: 50%;
+    margin-top: -17.5px;
+    margin-left: -17.5px;
+    border: 2px solid #606060;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: rotate .75s linear infinite;
+    animation: rotate .75s linear infinite;
+    z-index: 1;
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/ }
+    @media only screen and (min-width: 0px) and (max-width: 767px) and (orientation: landscape) {
+      .images-loader-div .loader {
+        left: 50%;
+        top: 56%;
+        margin-left: -25px; } }
+
+.grey-placeholder {
+  display: block;
+  height: 100%;
+  width: 100%; }
+
+.pop {
+  width: auto;
+  height: auto;
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  fill: #FFFFFF;
+  stroke: #FFFFFF;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease; }
+  .pop svg g g path {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease; }
+  .pop svg text {
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    fill: #FFFFFF;
+    stroke: #FFFFFF; }
+  .pop:hover {
+    fill: #78cace;
+    stroke: #78cace;
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/ }
+    .pop:hover svg g g path {
+      fill: #78cace;
+      stroke: #78cace; }
+    .pop:hover svg path {
+      fill: #78cace;
+      stroke: #78cace; }
+    .pop:hover svg text {
+      transition: all 0.4s ease;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      fill: #78cace;
+      stroke: #78cace; }
+    @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+      .pop:hover {
+        fill: #78cace;
+        stroke: #78cace; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+      .pop:hover {
+        fill: #FFFFFF !important;
+        stroke: #FFFFFF !important; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+      .pop:hover {
+        fill: #FFFFFF !important;
+        stroke: #FFFFFF !important; } }
+  .pop .pop-a {
+    width: auto;
+    height: auto; }
+    .pop .pop-a svg {
+      width: 60px;
+      height: auto; }
+
+.nav {
+  width: auto;
+  height: 500px;
+  position: fixed;
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  z-index: 999; }
+
+.nav-content {
+  width: auto;
+  height: 500px; }
+  .nav-content .nav-ul .nav-li {
+    width: auto;
+    text-align: right; }
+    .nav-content .nav-ul .nav-li a {
+      color: #FFFFFF;
+      fill: #FFFFFF;
+      transition: color 0.4s ease;
+      -webkit-transition: color 0.4s ease;
+      -moz-transition: color 0.4s ease;
+      -ms-transition: color 0.4s ease;
+      -o-transition: color 0.4s ease;
+      font-size: 80px;
+      font-weight: 900; }
+      .nav-content .nav-ul .nav-li a:hover {
+        color: #78cace;
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/ }
+        @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+          .nav-content .nav-ul .nav-li a:hover {
+            color: #FFFFFF !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+          .nav-content .nav-ul .nav-li a:hover {
+            color: #FFFFFF !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+          .nav-content .nav-ul .nav-li a:hover {
+            color: #FFFFFF !important; } }
+
+.soundcloud-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999; }
+  .soundcloud-button a {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -ms-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    font-size: 80px;
+    font-weight: 900; }
+    .soundcloud-button a:hover {
+      color: #78cace;
+      /*  @if $media == large-desktop {
+          @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+        }*/
+      /*  @if $media == large-desktop {
+          @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+        }*/
+      /*  @if $media == large-desktop {
+          @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+        }*/ }
+      @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+        .soundcloud-button a:hover {
+          color: #FFFFFF !important; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+        .soundcloud-button a:hover {
+          color: #FFFFFF !important; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+        .soundcloud-button a:hover {
+          color: #FFFFFF !important; } }
+
+.soundcloud {
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  z-index: 999; }
+  .soundcloud .soundcloud-li {
+    margin-top: 20px; }
+    .soundcloud .soundcloud-li:nth-child(1) {
+      margin-top: 0; }
+    .soundcloud .soundcloud-li .soundcloud-p {
+      color: #FFFFFF;
+      fill: #FFFFFF;
+      transition: color 0.4s ease;
+      -webkit-transition: color 0.4s ease;
+      -moz-transition: color 0.4s ease;
+      -ms-transition: color 0.4s ease;
+      -o-transition: color 0.4s ease;
+      font-size: 80px;
+      font-weight: 900;
+      display: inline-block; }
+      .soundcloud .soundcloud-li .soundcloud-p:hover {
+        color: #78cace;
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/ }
+        @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+          .soundcloud .soundcloud-li .soundcloud-p:hover {
+            color: #FFFFFF !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+          .soundcloud .soundcloud-li .soundcloud-p:hover {
+            color: #FFFFFF !important; } }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+          .soundcloud .soundcloud-li .soundcloud-p:hover {
+            color: #FFFFFF !important; } }
+    .soundcloud .soundcloud-li iframe {
+      width: 300px;
+      height: 180px;
+      z-index: 999;
+      display: inline-block;
+      margin-left: 10px; }
+
+.soundSelected {
+  color: #78cace !important; }
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/images/18490009.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.logo {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  .logo table {
+    width: 100%;
+    height: 100%; }
+    .logo table tr td {
+      vertical-align: middle;
+      height: 100%; }
+      .logo table tr td .logo-h1 {
+        margin: auto;
+        height: 15vw; }
+        .logo table tr td .logo-h1 svg {
+          width: 100%;
+          height: 100%; }
+
+.three {
+  position: relative;
+  height: 100vh;
+  width: 100vw; }
+
+.episode {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  .episode table {
+    width: 100%;
+    height: 100%; }
+    .episode table tr td {
+      vertical-align: middle;
+      height: 100%; }
+      .episode table tr td .episode-iframe {
+        display: block;
+        margin: auto;
+        width: 100vw;
+        height: 60vh; }
+
+.album {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  .album table {
+    width: 100%;
+    height: 100%; }
+    .album table tr td {
+      vertical-align: middle;
+      height: 100%; }
+      .album table tr td .album-content {
+        display: block;
+        margin: auto;
+        width: 71vw;
+        height: auto; }
+        .album table tr td .album-content .album-content-front {
+          display: inline-block;
+          width: 35vw;
+          height: auto;
+          float: left; }
+        .album table tr td .album-content .album-content-back {
+          display: inline-block;
+          width: 35vw;
+          height: auto;
+          float: left;
+          margin-left: 1vw; }
+
+.gallery {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  .gallery table {
+    width: 100%;
+    height: 100%; }
+    .gallery table tr td {
+      vertical-align: middle;
+      height: 100%; }
+      .gallery table tr td .gallery-content {
+        display: block;
+        margin: auto;
+        width: 100vw;
+        height: auto; }
+        .gallery table tr td .gallery-content .gallery-content-image {
+          display: inline-block;
+          float: left;
+          width: 25vw;
+          height: auto; }
+
+.social {
+  width: 100vw;
+  height: 80px;
+  position: absolute;
+  bottom: 0; }
+  .social .social-wrapper {
+    margin: auto;
+    height: 80px;
+    width: 263px; }
+    .social .social-wrapper .social-icon {
+      display: block;
+      float: left;
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      margin-top: 5px; }
+      .social .social-wrapper .social-icon a {
+        fill: #FFFFFF;
+        stroke: #FFFFFF;
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease; }
+        .social .social-wrapper .social-icon a svg g g path {
+          fill: #FFFFFF;
+          stroke: #FFFFFF;
+          transition: all 0.4s ease;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease; }
+        .social .social-wrapper .social-icon a svg text {
+          transition: all 0.4s ease;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease;
+          fill: #FFFFFF;
+          stroke: #FFFFFF; }
+        .social .social-wrapper .social-icon a:hover {
+          fill: #78cace;
+          stroke: #78cace;
+          /*  @if $media == large-desktop {
+              @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+            }*/
+          /*  @if $media == large-desktop {
+              @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+            }*/
+          /*  @if $media == large-desktop {
+              @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+            }*/ }
+          .social .social-wrapper .social-icon a:hover svg g g path {
+            fill: #78cace;
+            stroke: #78cace; }
+          .social .social-wrapper .social-icon a:hover svg path {
+            fill: #78cace;
+            stroke: #78cace; }
+          .social .social-wrapper .social-icon a:hover svg text {
+            transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -ms-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            fill: #78cace;
+            stroke: #78cace; }
+          @media only screen and (min-width: 0px) and (max-device-width: 767px) {
+            .social .social-wrapper .social-icon a:hover {
+              fill: #78cace;
+              stroke: #78cace; } }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: portrait) {
+            .social .social-wrapper .social-icon a:hover {
+              fill: #FFFFFF !important;
+              stroke: #FFFFFF !important; } }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1022px) and (orientation: landscape) {
+            .social .social-wrapper .social-icon a:hover {
+              fill: #FFFFFF !important;
+              stroke: #FFFFFF !important; } }
+      .social .social-wrapper .social-icon:nth-child(5) {
+        margin-right: 0px; }
+      .social .social-wrapper .social-icon:nth-child(1) {
+        margin-left: 0; }
+      .social .social-wrapper .social-icon a svg {
+        width: 100%;
+        height: 100%; }
+
+#social-twitter {
+  margin-right: 13px; }
+
+#social-itunes {
+  width: 70px; }
+
+.about {
+  width: 100vw;
+  height: 100vh; }
+
+.contact {
+  width: 100vw;
+  height: 100vh; }
+
+.contact-a {
+  width: 200px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  /*  @if $media == large-desktop {
+      @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+    }*/ }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .contact-a {
+      width: 100vw;
+      text-align: center; } }
+
+.tour {
+  display: block;
+  width: 100vw;
+  margin: auto; }
+
+.tour-container {
+  width: 75%;
+  display: block;
+  height: auto;
+  margin: auto; }
+
+.tour-ul {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  word-break: keep-all;
+  /*  @if $media == large-desktop {
+      @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+    }*/ }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .tour-ul {
+      width: 100%; } }
+  .tour-ul li {
+    display: block;
+    width: auto;
+    white-space: nowrap;
+    margin-top: 40px;
+    word-break: keep-all;
+    /*  @if $media == large-desktop {
+        @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+      }*/ }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .tour-ul li {
+        overflow: scroll;
+        width: 100%;
+        text-align: center; } }
+    .tour-ul li .tour-date {
+      width: 20%; }
+    .tour-ul li .tour-location {
+      width: 30%;
+      white-space: nowrap; }
+    .tour-ul li .tour-venue {
+      width: 30%;
+      width: 200px;
+      word-wrap: break-word; }
+    .tour-ul li p {
+      display: inline-block;
+      white-space: normal;
+      height: 100%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: normal;
+      /*  @if $media == large-desktop {
+          @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+        }*/ }
+      @media only screen and (min-width: 0px) and (max-width: 767px) {
+        .tour-ul li p {
+          font-size: 9px; } }
+    .tour-ul li .tour-rsvp {
+      width: 20%; }
+      .tour-ul li .tour-rsvp a {
+        margin-left: 10px;
+        text-align: right;
+        width: auto;
+        float: right;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: normal;
+        /*  @if $media == large-desktop {
+            @media only screen and (min-width: $break-large-desktop + 1) and (max-width: $break-infinite) { @content; }
+          }*/ }
+        @media only screen and (min-width: 0px) and (max-width: 767px) {
+          .tour-ul li .tour-rsvp a {
+            font-size: 9px; } }

@@ -1,0 +1,411 @@
+/*....................................General settings..................................*/
+
+
+
+
+/*.....................TEXT MARK STYLES......................*/
+
+::-moz-selection {
+  background: transparent;
+  color: $turquoise;
+  fill: $turquoise;
+  stroke: $turquoise;
+  text-shadow: none;
+  opacity:1;
+}
+
+
+::selection {
+    background: transparent;
+    color: $turquoise;
+    fill: $turquoise;
+    stroke: $turquoise;
+    text-shadow: none;
+    opacity:1;
+}
+
+/*.........................................................*/
+
+
+
+
+
+
+/*.....................ACTIVE CLASSES......................*/
+
+.active{
+  color: $turquoise !important;
+  pointer-events: none;
+}
+
+/*.........................................................*/
+
+
+
+
+
+
+/*....................HIDING SCROLLBAR.....................*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.....................GENERAL STYLES......................*/
+
+html{
+  font-family: helvetica;
+  width: 100%;
+  height: 100%;
+  margin: 0, 0;
+  padding: 0, 0;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0, 0;
+  padding: 0, 0;
+  text-transform: uppercase;
+/* Set the background color of the HTML page to black */
+background-color: #000000;
+
+/* Hide oversized content. This prevents the scroll bars. */
+// overflow: hidden;
+}
+
+
+p, a, li {
+  font-size: $font-size-paragraph;
+  list-style-type: none;
+  letter-spacing:$letter-spacing;
+  color: #FFFFFF;
+}
+
+
+
+a{
+  @include hover-effect-color(#FFFFFF, #606060);
+}
+
+
+input, textarea, select, a, li {
+  text-decoration: none;
+}
+
+/*.........................................................*/
+
+
+
+
+
+/*.............................NG-CLOAK............................*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+cursor: pointer;
+}
+
+
+
+
+
+/*.........................................................*/
+
+
+
+
+
+
+/*.........................MAIN............................*/
+
+
+main {
+  width:  100vw;
+  // height: 100vh;
+  // overflow:scroll;
+  position: relative;
+  display: block;
+  list-style-type: none;
+
+  // z-index: $z-main;
+}
+
+/*.............................Loader............................*/
+
+
+
+.page-loader-div{
+  display: block;
+  height: 100vh;
+  opacity: 1;
+  display: block;
+  width: 100vw;
+  float: left;
+  padding: 0;
+  margin: 0;
+  display: list-item;
+  background-color: transparent;
+  z-index: $z-loader;
+  background-color: rgba(255,255,255,0.95);
+  position: fixed;
+  p{
+    position: fixed;
+    top:50%;
+    left:50%;
+    width:100px;
+    height:50px;
+    margin-top:-25px;
+    margin-left:-50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: $font-size-subtitle;
+    font-family: helvetica;
+  }
+}
+
+
+
+
+
+/*.............................NG-CLOAK............................*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.share{
+  width: 50px;
+  position: fixed;
+  bottom: $margin-sides;
+  right: $margin-sides;
+  z-index: $z-share;
+}
+
+.share-button{
+    @include hover-effect-color(#000000, $turquoise);
+
+}
+
+.share-content{
+  position: fixed;
+  bottom: 50px;
+  right: -87px;
+  .share-ul{
+    .share-li{
+      a{
+        text-align: right;
+        width: 100%;
+        display: block;
+        font-size: $font-size-subtitle;
+        line-height: $line-height-subtitle;
+
+      }
+    }
+  }
+}
+
+
+
+
+
+@keyframes close_slideLeft {
+  0% { @include transform-element(translateX(0px)); }
+  100% { @include transform-element(translateX(-100px)); }
+}
+
+@-webkit-keyframes close_slideLeft {
+  0% { @include transform-element(translateX(0px)); }
+  100% { @include transform-element(translateX(-100px)); }
+}
+
+@-moz-keyframes close_slideLeft {
+  0% { @include transform-element(translateX(0px)); }
+  100% { @include transform-element(translateX(-100px)); }
+}
+
+@-ms-keyframes close_slideLeft {
+  0% { @include transform-element(translateX(0px)); }
+  100% { @include transform-element(translateX(-100px)); }
+}
+
+@-o-keyframes close_slideLeft {
+  0% { @include transform-element(translateX(0px)); }
+  100% { @include transform-element(translateX(-100px)); }
+}
+
+
+
+@keyframes close_slideRight {
+  0% { @include transform-element(translateX(-100px)); }
+  100% { @include transform-element(translateX(0px)); }
+}
+
+@-webkit-keyframes close_slideRight {
+  0% { @include transform-element(translateX(-100px)); }
+  100% { @include transform-element(translateX(0px)); }
+}
+
+@-moz-keyframes close_slideRight {
+  0% { @include transform-element(translateX(-100px)); }
+  100% { @include transform-element(translateX(0px)); }
+}
+
+@-ms-keyframes close_slideRight {
+  0% { @include transform-element(translateX(-100px)); }
+  100% { @include transform-element(translateX(0px)); }
+}
+
+@-o-keyframes close_slideRight {
+  0% { @include transform-element(translateX(-100px)); }
+  100% { @include transform-element(translateX(0px)); }
+}
+
+
+$animation-bezier: ease-in;
+$animation-speed: 0.3s;
+
+.share-content{
+  position: fixed;
+  @include transform-element(translateX(-100px));
+}
+.share-content.ng-hide{
+  @include transform-element(translateX(0px));
+}
+
+
+.share-content.ng-hide-remove.ng-hide-remove-active{
+  -webkit-animation: close_slideLeft $animation-speed $animation-bezier;
+  -moz-animation: close_slideLeft $animation-speed $animation-bezier;
+  -ms-animation: close_slideLeft $animation-speed $animation-bezier;
+  -o-animation: close_slideLeft $animation-speed $animation-bezier;
+  animation: close_slideLeft $animation-speed $animation-bezier;
+}
+
+.share-content.ng-hide-add.ng-hide-add-active{
+
+  -webkit-animation: close_slideRight $animation-speed $animation-bezier;
+  -moz-animation: close_slideRight $animation-speed $animation-bezier;
+  -ms-animation: close_slideRight $animation-speed $animation-bezier;
+  -o-animation: close_slideRight $animation-speed $animation-bezier;
+  animation: close_slideRight $animation-speed $animation-bezier;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.images-loader-div{
+  display: block;
+  position: relative;
+  width: 33.333333333333vw !important;
+  height: 33.3333333333vw !important;
+  opacity: 1;
+  display: block;
+  // float: left;
+  padding: 0;
+  margin: 0 0 0 0;
+  display: list-item;
+  background-color: #FFFFFF;
+  // border: 1px solid #FFFFFF;
+  @include respond-to(phone) {
+    width: 100vw !important;
+    height: 100vw !important;
+  }
+  .loader {
+    position: relative;
+    height: 35px !important;
+    width: 35px !important;
+    top: 50% !important;
+    left: 50%;
+    margin-top: -17.5px;
+    margin-left: -17.5px;
+    border: 2px solid #606060;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: rotate .75s linear infinite;
+    animation: rotate .75s linear infinite;
+    z-index: 1;
+    @include respond-to(phone-landscape-device) {
+      left: 50%;
+      top: 56%;
+      margin-left: -25px;
+    }
+  }
+}
+
+.grey-placeholder{
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}

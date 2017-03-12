@@ -1,0 +1,28 @@
+<div class="tour" ng-controller="tourCtrl">
+
+  <!-- <div class="home-tour-close" ng-click="showTour=false">
+    <a href="#"></a>
+  </div> -->
+
+
+  <div class="tour-container">
+    <ul class="tour-ul">
+      <li ng-repeat="t in tour | orderBy: 'datetime' track by $index" class="tour-li">
+        <!-- {{t.datetime}} -->
+          <p class="tour-date" ng-if="t.formatted_location">{{t.datetime | date}}</p>
+          <p class="tour-location" ng-if="t.formatted_location">{{t.formatted_location}}</p>
+          <p class="tour-venue" ng-if="t.venue && !isMobile">{{t.venue.name}}</p>
+          <p class="tour-rsvp" ng-if="t.facebook_rsvp_url"><a href="{{t.facebook_rsvp_url}}">RSVP</a><a href="{{t.ticket_url}}">TICKETS</a></p>
+          <!-- <p class="test1">This paragraph contains some text. This line will-break-at-hyphens.</p> -->
+
+      </li>
+
+    </ul>
+  </div>
+
+
+
+
+
+
+</div>

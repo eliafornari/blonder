@@ -1,0 +1,18 @@
+.contact{
+  width: 100vw;
+  height: 100vh;
+
+
+}
+
+
+.contact-a{
+  width: 200px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  @include respond-to(phone){
+    width: 100vw;
+    text-align: center;
+  }
+}
