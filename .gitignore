@@ -9,5 +9,5 @@ node_modules
 
 
 
-nodemon
-nodemon/*
+node_modules
+node_modules/*
